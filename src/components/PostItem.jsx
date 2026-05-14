@@ -25,7 +25,7 @@ export default function PostItem({ post, isSelected, onSelect, onDelete, onUpdat
           <input
             className="postItemEditTitle"
             value={editTitle}
-            onChange={(e) => setEditTitle(e.target.value)}
+            onChange={({ target }) => setEditTitle(target.value)}
           />
         ) : (
           <strong className="postItemTitle">{post.title}</strong>
@@ -51,7 +51,7 @@ export default function PostItem({ post, isSelected, onSelect, onDelete, onUpdat
         <textarea
           className="postItemEditBody"
           value={editBody}
-          onChange={(e) => setEditBody(e.target.value)}
+          onChange={({ target }) => setEditBody(target.value)}
           rows={3}
         />
       )}

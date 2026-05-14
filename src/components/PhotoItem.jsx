@@ -30,13 +30,13 @@ export default function PhotoItem({ photo, onDelete, onUpdate }) {
           <input
             className="photoItemEditInput"
             value={editTitle}
-            onChange={(e) => setEditTitle(e.target.value)}
+            onChange={({ target }) => setEditTitle(target.value)}
             placeholder="Title"
           />
           <input
             className="photoItemEditInput"
             value={editUrl}
-            onChange={(e) => setEditUrl(e.target.value)}
+            onChange={({ target }) => setEditUrl(target.value)}
             placeholder="Image URL"
           />
         </div>

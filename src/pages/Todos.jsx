@@ -53,7 +53,7 @@ export default function Todos() {
           <select
             className="todosSort"
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
+            onChange={({ target }) => setSortBy(target.value)}
           >
             <option value="id">Sort by ID</option>
             <option value="title">Sort by Title</option>
@@ -64,7 +64,7 @@ export default function Todos() {
             type="text"
             placeholder="Search todos..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={({ target }) => setSearchTerm(target.value)}
           />
         </div>
         {loading && <p className="todosLoading">Loading...</p>}
@@ -86,7 +86,7 @@ export default function Todos() {
             type="text"
             placeholder="New todo title..."
             value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
+            onChange={({ target }) => setNewTitle(target.value)}
           />
           <button className="todosAddBtn" type="submit">Add Todo</button>
         </form>

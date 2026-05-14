@@ -4,7 +4,7 @@ import { getPhotos, createPhoto, updatePhoto, deletePhoto } from '../services/ap
 const LIMIT = 10;
 
 /**
- * Manages photos for a given album with server-side ordered photos and sessionStorage caching.
+ * Manages photos for a given album with server-side batch-loading and sessionStorage caching.
  *
  * we decided to do here a Two-effect design:
  * 1. Effect 1 [albumId]: on mount, restores from cache or fetches page 1.
@@ -85,7 +85,7 @@ export function usePhotos(albumId) {
     return () => { cancelled = true; };
   }, [albumId, currentPage]);
 
-  /** Writes the updated photos array to state and sessionStorage without changing pagination state. */
+  /** Writes the updated photos array to state and sessionStorage without changing the batch-loading state. */
   function persist(updated) {
     setPhotos(updated);
     sessionStorage.setItem(cacheKey, JSON.stringify({ photos: updated, hasMore, currentPage }));

@@ -28,8 +28,8 @@ export default function TodoItem({ todo, onDelete, onToggle, onUpdateTitle }) {
         <input
           className="todoItemEditInput"
           value={editValue}
-          onChange={(e) => setEditValue(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSave()}
+          onChange={({ target }) => setEditValue(target.value)}
+          onKeyDown={({ key }) => key === 'Enter' && handleSave()}
           autoFocus
         />
       ) : (

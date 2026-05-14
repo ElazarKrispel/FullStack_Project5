@@ -51,7 +51,7 @@ export default function Albums() {
           type="text"
           placeholder="Search by id or title..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={({ target }) => setSearchTerm(target.value)}
         />
         {loading && <p className="albumsLoading">Loading...</p>}
         {error && <p className="albumsError">{error}</p>}
@@ -71,7 +71,7 @@ export default function Albums() {
             type="text"
             placeholder="New album title..."
             value={newAlbumTitle}
-            onChange={(e) => setNewAlbumTitle(e.target.value)}
+            onChange={({ target }) => setNewAlbumTitle(target.value)}
           />
           <button className="albumsAddBtn" type="submit">Create Album</button>
         </form>

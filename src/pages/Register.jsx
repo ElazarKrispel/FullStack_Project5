@@ -80,7 +80,7 @@ export default function Register() {
               className="registerInput"
               type="text"
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={({ target }) => setUsername(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-password">Password</label>
@@ -89,7 +89,7 @@ export default function Register() {
               className="registerInput"
               type="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={({ target }) => setPassword(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-verify">Verify Password</label>
@@ -98,7 +98,7 @@ export default function Register() {
               className="registerInput"
               type="password"
               value={passwordVerify}
-              onChange={(e) => setPasswordVerify(e.target.value)}
+              onChange={({ target }) => setPasswordVerify(target.value)}
               required
             />
             {error && <p className="registerError">{error}</p>}
@@ -114,7 +114,7 @@ export default function Register() {
               className="registerInput"
               type="text"
               value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              onChange={({ target }) => setFullName(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-email">Email</label>
@@ -123,7 +123,7 @@ export default function Register() {
               className="registerInput"
               type="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={({ target }) => setEmail(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-phone">Phone</label>
@@ -132,7 +132,7 @@ export default function Register() {
               className="registerInput"
               type="text"
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              onChange={({ target }) => setPhone(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-city">City</label>
@@ -141,7 +141,7 @@ export default function Register() {
               className="registerInput"
               type="text"
               value={city}
-              onChange={(e) => setCity(e.target.value)}
+              onChange={({ target }) => setCity(target.value)}
               required
             />
             <label className="registerLabel" htmlFor="reg-company">Company Name</label>
@@ -150,7 +150,7 @@ export default function Register() {
               className="registerInput"
               type="text"
               value={companyName}
-              onChange={(e) => setCompanyName(e.target.value)}
+              onChange={({ target }) => setCompanyName(target.value)}
               required
             />
             {error && <p className="registerError">{error}</p>}

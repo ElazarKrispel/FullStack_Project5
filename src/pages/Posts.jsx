@@ -116,7 +116,7 @@ export default function Posts() {
           type="text"
           placeholder="Search by id or title..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={({ target }) => setSearchTerm(target.value)}
         />
         {loading && <p className="postsLoading">Loading...</p>}
         {error && <p className="postsError">{error}</p>}
@@ -139,14 +139,14 @@ export default function Posts() {
             type="text"
             placeholder="Title"
             value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
+            onChange={({ target }) => setNewTitle(target.value)}
             required
           />
           <textarea
             className="postsAddBody"
             placeholder="Body"
             value={newBody}
-            onChange={(e) => setNewBody(e.target.value)}
+            onChange={({ target }) => setNewBody(target.value)}
             rows={3}
           />
           <button className="postsAddBtn" type="submit">Add</button>
@@ -179,7 +179,7 @@ export default function Posts() {
                     type="text"
                     placeholder="Write a comment..."
                     value={newCommentBody}
-                    onChange={(e) => setNewCommentBody(e.target.value)}
+                    onChange={({ target }) => setNewCommentBody(target.value)}
                     required
                   />
                   <button className="postsAddCommentBtn" type="submit">Add Comment</button>

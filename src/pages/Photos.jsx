@@ -7,7 +7,7 @@ import PhotoItem from '../components/PhotoItem';
 import './Photos.css';
 
 /**
- * Photos page for a specific album. Supports server-side pagination, add, delete, and edit.
+ * Photos page for a specific album. Supports server-side batch-loading, add, delete, and edit.
  */
 export default function Photos() {
   const { id, albumId } = useParams();
@@ -69,7 +69,7 @@ export default function Photos() {
             type="text"
             placeholder="Photo title"
             value={newTitle}
-            onChange={(e) => setNewTitle(e.target.value)}
+            onChange={({ target }) => setNewTitle(target.value)}
             required
           />
           <input
@@ -77,7 +77,7 @@ export default function Photos() {
             type="url"
             placeholder="Image URL (https://picsum.photos/id/1/150/150)"
             value={newUrl}
-            onChange={(e) => setNewUrl(e.target.value)}
+            onChange={({ target }) => setNewUrl(target.value)}
             required
           />
           <button className="photosAddBtn" type="submit">Add</button>

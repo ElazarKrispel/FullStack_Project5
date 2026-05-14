@@ -43,7 +43,7 @@ export default function Login() {
             className="loginInput"
             type="text"
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={({ target }) => setUsername(target.value)}
             required
           />
           <label className="loginLabel" htmlFor="password">Password</label>
@@ -52,7 +52,7 @@ export default function Login() {
             className="loginInput"
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={({ target }) => setPassword(target.value)}
             required
           />
           {error && <p className="loginError">{error}</p>}

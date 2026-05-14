@@ -28,7 +28,7 @@ export default function CommentItem({ comment, loggedUserEmail, onDelete, onUpda
         <input
           className="commentItemEditInput"
           value={editBody}
-          onChange={(e) => setEditBody(e.target.value)}
+          onChange={({ target }) => setEditBody(target.value)}
           autoFocus
         />
       ) : (
