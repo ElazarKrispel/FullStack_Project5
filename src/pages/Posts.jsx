@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { usePosts } from '../hooks/usePosts';
 import { getLoggedUser } from '../utils/storage';
-import { getComments, createComment, updateComment, deleteComment } from '../services/api';
+import { useComments } from '../hooks/useComments';
 import NavBar from '../components/NavBar';
 import PostItem from '../components/PostItem';
 import CommentItem from '../components/CommentItem';
@@ -20,9 +20,17 @@ export default function Posts() {
   const [newTitle, setNewTitle] = useState('');
   const [newBody, setNewBody] = useState('');
   const [selectedPostId, setSelectedPostId] = useState(null);
-  const [comments, setComments] = useState([]);
+  const {
+    comments,
+    loading: commentsLoading,
+    error: commentsError,
+    fetchComments,
+    addComment,
+    deleteComment,
+    updateComment,
+    clearComments,
+  } = useComments();
   const [showComments, setShowComments] = useState(false);
-  const [commentsLoading, setCommentsLoading] = useState(false);
   const [newCommentBody, setNewCommentBody] = useState('');
 
   const loggedUser = getLoggedUser();
@@ -46,11 +54,11 @@ export default function Posts() {
     if (selectedPostId === postId) {
       // deselect
       setSelectedPostId(null);
-      setComments([]);
+      clearComments();
       setShowComments(false);
     } else {
       setSelectedPostId(postId);
-      setComments([]);
+      clearComments();
       setShowComments(false);
     }
   }
@@ -60,39 +68,15 @@ export default function Posts() {
       setShowComments(false);
       return;
     }
-    setCommentsLoading(true);
-    try {
-      const data = await getComments(selectedPostId);
-      setComments(data);
-      setShowComments(true);
-    } catch {
-      // error is non-critical for this view
-    } finally {
-      setCommentsLoading(false);
-    }
+    await fetchComments(selectedPostId);
+    setShowComments(true);
   }
 
   async function handleAddComment(e) {
     e.preventDefault();
     if (!newCommentBody.trim()) return;
-    const created = await createComment({
-      postId: selectedPostId,
-      name: loggedUser.name,
-      email: loggedUser.email,
-      body: newCommentBody.trim(),
-    });
-    setComments([...comments, created]);
+    await addComment(selectedPostId, loggedUser.name, loggedUser.email, newCommentBody.trim());
     setNewCommentBody('');
-  }
-
-  async function handleDeleteComment(commentId) {
-    await deleteComment(commentId);
-    setComments(comments.filter((c) => c.id !== commentId));
-  }
-
-  async function handleUpdateComment(commentId, body) {
-    const updated = await updateComment(commentId, { body });
-    setComments(comments.map((c) => (c.id === commentId ? updated : c)));
   }
 
   // filter posts by id or title
@@ -160,6 +144,7 @@ export default function Posts() {
               {showComments ? 'Hide Comments' : 'Show Comments'}
             </button>
             {commentsLoading && <p className="postsLoading">Loading comments...</p>}
+            {commentsError && <p className="postsError">{commentsError}</p>}
             {showComments && (
               <div className="postsComments">
                 <ul className="postsCommentsList">
@@ -168,8 +153,8 @@ export default function Posts() {
                       key={c.id}
                       comment={c}
                       loggedUserEmail={loggedUser.email}
-                      onDelete={handleDeleteComment}
-                      onUpdate={handleUpdateComment}
+                      onDelete={deleteComment}
+                      onUpdate={updateComment}
                     />
                   ))}
                 </ul>
