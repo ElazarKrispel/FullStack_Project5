@@ -1,85 +1,82 @@
-.loginPage {
+.loginPage, .registerPage {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f1f5f9;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem;
 }
 
-.loginCard {
-  background: #ffffff;
-  padding: 2rem 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+.loginCard, .registerCard {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.5) inset;
   width: 100%;
-  max-width: 380px;
+  max-width: 420px;
+  animation: slideUp 0.5s ease-out;
 }
 
-.loginTitle {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.5rem;
-  color: #1e293b;
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loginTitle, .registerTitle {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  color: var(--text-primary);
   text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
-.loginForm {
+.loginForm, .registerForm {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.loginLabel {
+.loginLabel, .registerLabel {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #374151;
+  color: var(--text-secondary);
+  margin-bottom: -0.5rem;
 }
 
-.loginInput {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  margin-bottom: 0.25rem;
+.loginInput, .registerInput {
+  /* Inherits from global input styles in index.css */
+  width: 100%;
 }
 
-.loginInput:focus {
-  outline: none;
-  border-color: #3b82f6;
-}
-
-.loginError {
-  color: #dc2626;
+.loginError, .registerError {
+  color: var(--danger-color);
   font-size: 0.85rem;
+  font-weight: 500;
   margin: 0;
+  text-align: center;
+  background: #fee2e2;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
 }
 
-.loginBtn {
-  margin-top: 0.75rem;
-  padding: 0.6rem;
-  background: #1e293b;
-  color: #f8fafc;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.loginBtn:hover {
-  background: #334155;
+.loginBtn, .registerBtn {
+  /* Inherits from global button styles */
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 0.85rem;
 }
 
 .loginRegisterLink {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #64748b;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
 }
 
 .loginRegisterLink a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.loginRegisterLink a:hover {
-  text-decoration: underline;
+  font-weight: 600;
 }

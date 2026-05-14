@@ -1,161 +1,151 @@
 .postsPage {
-  max-width: 700px;
-  margin: 2rem auto;
+  max-width: 800px;
+  margin: 3rem auto;
   padding: 0 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .postsTitle {
-  font-size: 1.5rem;
-  color: #1e293b;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .postsSearch {
   width: 100%;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  box-sizing: border-box;
-}
-
-.postsSearch:focus {
-  outline: none;
-  border-color: #3b82f6;
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
 }
 
 .postsLoading,
 .postsError {
-  color: #64748b;
-  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .postsError {
-  color: #dc2626;
+  color: var(--danger-color);
+  background: #fef2f2;
 }
 
 .postsList {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2.5rem 0;
 }
 
 .postsAddForm {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  background: #f8fafc;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .postsAddTitle {
-  margin: 0 0 0.25rem 0;
-  font-size: 1rem;
-  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
 }
 
-.postsAddInput {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.95rem;
-}
-
+.postsAddInput,
 .postsAddBody {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  resize: vertical;
+  width: 100%;
 }
 
 .postsAddBtn {
-  align-self: flex-start;
-  padding: 0.5rem 1.25rem;
-  background: #1e293b;
-  color: #f8fafc;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.postsAddBtn:hover {
-  background: #334155;
+  align-self: flex-end;
+  margin-top: 0.5rem;
 }
 
 .postsSelectedPost {
-  padding: 1rem;
-  border: 1px solid #3b82f6;
-  border-radius: 8px;
-  background: #eff6ff;
-  margin-bottom: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: #f8faff;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(99, 102, 241, 0.1) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.postsSelectedPost::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
 }
 
 .postsSelectedTitle {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
-  color: #1e293b;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .postsSelectedBody {
-  color: #374151;
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
 }
 
 .postsCommentsToggle {
-  padding: 0.4rem 0.9rem;
-  border: 1px solid #3b82f6;
-  border-radius: 6px;
-  background: #ffffff;
-  cursor: pointer;
-  font-size: 0.85rem;
-  color: #1d4ed8;
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  font-weight: 600;
+  box-shadow: none;
 }
 
 .postsCommentsToggle:hover {
-  background: #dbeafe;
+  background: var(--accent-color);
+  color: white;
 }
 
 .postsComments {
-  margin-top: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
 }
 
 .postsCommentsList {
   list-style: none;
   padding: 0;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .postsAddComment {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .postsAddCommentInput {
   flex: 1;
-  padding: 0.4rem 0.6rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.9rem;
 }
 
 .postsAddCommentBtn {
-  padding: 0.4rem 0.9rem;
-  background: #1e293b;
-  color: #f8fafc;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  cursor: pointer;
   white-space: nowrap;
-}
-
-.postsAddCommentBtn:hover {
-  background: #334155;
 }

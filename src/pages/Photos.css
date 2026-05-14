@@ -1,109 +1,114 @@
 .photosPage {
-  max-width: 900px;
-  margin: 2rem auto;
+  max-width: 1000px;
+  margin: 3rem auto;
   padding: 0 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .photosPageHeader {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .photosBackBtn {
-  padding: 0.4rem 0.9rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  background: #f8fafc;
-  cursor: pointer;
-  font-size: 0.9rem;
-  color: #374151;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .photosBackBtn:hover {
-  background: #e2e8f0;
+  background: var(--bg-primary);
+  border-color: var(--text-secondary);
 }
 
 .photosAlbumTitle {
-  font-size: 1.5rem;
-  color: #1e293b;
+  font-size: 2rem;
+  color: var(--text-primary);
   margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .photosLoading,
 .photosError {
-  color: #64748b;
-  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .photosError {
-  color: #dc2626;
+  color: var(--danger-color);
+  background: #fef2f2;
 }
 
+/* FIX: Use CSS Grid so all photos are strictly the same width */
 .photosGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .photosLoadMore {
   display: block;
-  margin: 0 auto 1.5rem auto;
-  padding: 0.5rem 2rem;
-  background: #1e293b;
-  color: #f8fafc;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  cursor: pointer;
+  margin: 0 auto 3rem auto;
+  padding: 0.75rem 2.5rem;
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--radius-xl);
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .photosLoadMore:hover {
-  background: #334155;
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md), 0 0 0 2px rgba(99, 102, 241, 0.2);
 }
 
 .photosAddForm {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  background: #f8fafc;
-  max-width: 420px;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  max-width: 500px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 0 auto 3rem auto;
 }
 
 .photosAddTitle {
-  margin: 0 0 0.25rem 0;
-  font-size: 1rem;
-  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
 }
 
 .photosAddInput {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.photosAddInput:focus {
-  outline: none;
-  border-color: #3b82f6;
+  width: 100%;
 }
 
 .photosAddBtn {
   align-self: flex-start;
-  padding: 0.5rem 1.25rem;
-  background: #1e293b;
-  color: #f8fafc;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.photosAddBtn:hover {
-  background: #334155;
+  margin-top: 0.5rem;
 }

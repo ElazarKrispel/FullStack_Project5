@@ -1,77 +1,93 @@
 .todoItem {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
   margin-bottom: 0.5rem;
-  background: #ffffff;
+  background: var(--bg-secondary);
   flex-wrap: wrap;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.todoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.todoItemDone {
+  background: #f8fafc;
+  opacity: 0.8;
 }
 
 .todoItemDone .todoItemTitle {
   text-decoration: line-through;
-  color: #94a3b8;
+  color: var(--text-secondary);
 }
 
 .todoItemId {
-  color: #94a3b8;
-  font-size: 0.8rem;
-  width: 4rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: #e0e7ff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
   direction: ltr;
 }
 
 .todoItemCheckbox {
   cursor: pointer;
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
   flex-shrink: 0;
+  accent-color: var(--accent-color);
 }
 
 .todoItemTitle {
   flex: 1;
-  color: #1e293b;
-  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 500;
 }
 
 .todoItemEditInput {
   flex: 1;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #94a3b8;
-  border-radius: 4px;
-  font-size: 0.95rem;
 }
 
 .todoItemActions {
   display: flex;
-  gap: 0.4rem;
-  margin-right: auto;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 
 .todoItemBtn {
-  padding: 0.25rem 0.65rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 4px;
-  background: #f8fafc;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
   cursor: pointer;
-  font-size: 0.8rem;
-  color: #374151;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .todoItemBtn:hover {
-  background: #e2e8f0;
+  background: var(--border-color);
+  color: var(--text-primary);
 }
 
 .todoItemBtnDelete {
-  border-color: #fca5a5;
-  color: #dc2626;
+  color: var(--danger-color);
+  background: #fef2f2;
+  border-color: #fecaca;
 }
 
 .todoItemBtnDelete:hover {
-  background: #fee2e2;
+  background: var(--danger-hover);
+  color: white;
+  border-color: var(--danger-hover);
 }
