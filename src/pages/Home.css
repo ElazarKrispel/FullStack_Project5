@@ -1,0 +1,68 @@
+.homePage {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.homeHeader {
+  margin-bottom: 2rem;
+}
+
+.homeUserName {
+  font-size: 2rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.homeNav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.homeNavLink {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: #1e293b;
+  color: #f8fafc;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.homeNavLink:hover {
+  background: #334155;
+}
+
+.homeActions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.homeActionBtn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.homeActionBtn:hover {
+  background: #e2e8f0;
+}
+
+.homeLogoutBtn {
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.homeLogoutBtn:hover {
+  background: #fee2e2;
+}

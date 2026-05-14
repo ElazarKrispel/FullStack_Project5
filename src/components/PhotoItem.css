@@ -1,0 +1,69 @@
+.photoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  width: 170px;
+}
+
+.photoItemImg {
+  border-radius: 4px;
+  object-fit: cover;
+  display: block;
+}
+
+.photoItemTitle {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #374151;
+  text-align: center;
+  word-break: break-word;
+}
+
+.photoItemEdit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.photoItemEditInput {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.photoItemActions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.photoItemBtn {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: #374151;
+}
+
+.photoItemBtn:hover {
+  background: #e2e8f0;
+}
+
+.photoItemBtnDelete {
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.photoItemBtnDelete:hover {
+  background: #fee2e2;
+}

@@ -1,0 +1,161 @@
+.postsPage {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.postsTitle {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.postsSearch {
+  width: 100%;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.postsSearch:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.postsLoading,
+.postsError {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.postsError {
+  color: #dc2626;
+}
+
+.postsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.postsAddForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  margin-bottom: 2rem;
+}
+
+.postsAddTitle {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.postsAddInput {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.postsAddBody {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.postsAddBtn {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  background: #1e293b;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.postsAddBtn:hover {
+  background: #334155;
+}
+
+.postsSelectedPost {
+  padding: 1rem;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  background: #eff6ff;
+  margin-bottom: 1.5rem;
+}
+
+.postsSelectedTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.postsSelectedBody {
+  color: #374151;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.postsCommentsToggle {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #3b82f6;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #1d4ed8;
+}
+
+.postsCommentsToggle:hover {
+  background: #dbeafe;
+}
+
+.postsComments {
+  margin-top: 0.75rem;
+}
+
+.postsCommentsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem 0;
+}
+
+.postsAddComment {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.postsAddCommentInput {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.postsAddCommentBtn {
+  padding: 0.4rem 0.9rem;
+  background: #1e293b;
+  color: #f8fafc;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.postsAddCommentBtn:hover {
+  background: #334155;
+}

@@ -1,0 +1,77 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  background: #ffffff;
+  flex-wrap: wrap;
+}
+
+.todoItemDone .todoItemTitle {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+.todoItemId {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  width: 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+  direction: ltr;
+}
+
+.todoItemCheckbox {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.todoItemTitle {
+  flex: 1;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.todoItemEditInput {
+  flex: 1;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.todoItemActions {
+  display: flex;
+  gap: 0.4rem;
+  margin-right: auto;
+}
+
+.todoItemBtn {
+  padding: 0.25rem 0.65rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #f8fafc;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.todoItemBtn:hover {
+  background: #e2e8f0;
+}
+
+.todoItemBtnDelete {
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.todoItemBtnDelete:hover {
+  background: #fee2e2;
+}

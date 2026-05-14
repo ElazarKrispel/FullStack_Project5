@@ -1,0 +1,61 @@
+import { useState } from 'react';
+import './PhotoItem.css';
+
+/**
+ * Renders a single photo card with thumbnail, title, inline editing, and delete.
+ */
+export default function PhotoItem({ photo, onDelete, onUpdate }) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editTitle, setEditTitle] = useState(photo.title);
+  const [editUrl, setEditUrl] = useState(photo.thumbnailUrl);
+
+  function handleSave() {
+    if (editTitle.trim()) {
+      onUpdate(photo.id, { title: editTitle.trim(), thumbnailUrl: editUrl.trim() });
+    }
+    setIsEditing(false);
+  }
+
+  return (
+    <div className="photoItem">
+      <img
+        src={photo.thumbnailUrl}
+        alt={photo.title}
+        className="photoItemImg"
+        width={150}
+        height={150}
+      />
+      {isEditing ? (
+        <div className="photoItemEdit">
+          <input
+            className="photoItemEditInput"
+            value={editTitle}
+            onChange={(e) => setEditTitle(e.target.value)}
+            placeholder="Title"
+          />
+          <input
+            className="photoItemEditInput"
+            value={editUrl}
+            onChange={(e) => setEditUrl(e.target.value)}
+            placeholder="Image URL"
+          />
+        </div>
+      ) : (
+        <p className="photoItemTitle">{photo.title}</p>
+      )}
+      <div className="photoItemActions">
+        {isEditing ? (
+          <button className="photoItemBtn" onClick={handleSave}>Save</button>
+        ) : (
+          <button className="photoItemBtn" onClick={() => setIsEditing(true)}>Edit</button>
+        )}
+        <button
+          className="photoItemBtn photoItemBtnDelete"
+          onClick={() => onDelete(photo.id)}
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  );
+}

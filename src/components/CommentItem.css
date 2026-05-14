@@ -1,0 +1,68 @@
+.commentItem {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 0.4rem;
+  background: #f8fafc;
+}
+
+.commentItemMeta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.commentItemName {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.commentItemEmail {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.commentItemBody {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.commentItemEditInput {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  box-sizing: border-box;
+}
+
+.commentItemActions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.commentItemBtn {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: #374151;
+}
+
+.commentItemBtn:hover {
+  background: #e2e8f0;
+}
+
+.commentItemBtnDelete {
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+.commentItemBtnDelete:hover {
+  background: #fee2e2;
+}

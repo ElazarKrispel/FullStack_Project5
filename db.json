@@ -1,0 +1,557 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Yossi Cohen",
+      "username": "yossi",
+      "email": "yossi@example.com",
+      "website": "pass1",
+      "phone": "050-1111111",
+      "address": {
+        "city": "Tel Aviv"
+      },
+      "company": {
+        "name": "TechCorp"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Dana Levi",
+      "username": "dana",
+      "email": "dana@example.com",
+      "website": "pass2",
+      "phone": "052-2222222",
+      "address": {
+        "city": "Haifa"
+      },
+      "company": {
+        "name": "StartupHub"
+      }
+    },
+    {
+      "username": "dani",
+      "website": "qwer1234",
+      "name": "dani danon",
+      "email": "dani@gmail.com",
+      "phone": "0547869834",
+      "address": {
+        "city": "jerusalem"
+      },
+      "company": {
+        "name": "jct"
+      },
+      "id": "ntLGOcv7a9M"
+    }
+  ],
+  "todos": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Buy groceries",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Read a book",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "title": "Go for a run",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "title": "Call the doctor",
+      "completed": true
+    },
+    {
+      "id": "5",
+      "userId": 1,
+      "title": "Fix the leaking tap",
+      "completed": false
+    },
+    {
+      "id": "6",
+      "userId": 2,
+      "title": "Prepare presentation",
+      "completed": false
+    },
+    {
+      "id": "7",
+      "userId": 2,
+      "title": "Send project report",
+      "completed": true
+    },
+    {
+      "id": "8",
+      "userId": 2,
+      "title": "Schedule team meeting",
+      "completed": false
+    },
+    {
+      "id": "9",
+      "userId": 2,
+      "title": "Review pull requests",
+      "completed": true
+    },
+    {
+      "id": "10",
+      "userId": 2,
+      "title": "Update documentation",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "title": "Take a shower",
+      "completed": false,
+      "id": "1_d29h1R9KY"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "My first post",
+      "body": "This is the body of my first post. It contains some interesting thoughts about life and technology."
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Tips for productivity",
+      "body": "Here are five tips I use every day to stay productive: plan ahead, take breaks, avoid multitasking, sleep well, and exercise regularly."
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "title": "Weekend trip to Eilat",
+      "body": "We drove down on Friday morning and arrived by noon. The Red Sea was stunning and the weather was perfect for snorkeling."
+    },
+    {
+      "id": "4",
+      "userId": 2,
+      "title": "Getting started with React",
+      "body": "React is a JavaScript library for building user interfaces. It uses a component-based architecture that makes code reusable and maintainable."
+    },
+    {
+      "id": "5",
+      "userId": 2,
+      "title": "Remote work lessons learned",
+      "body": "After two years of remote work I have learned that a dedicated workspace, clear working hours, and daily standups make all the difference."
+    },
+    {
+      "id": "6",
+      "userId": 2,
+      "title": "Favorite coffee shops in Haifa",
+      "body": "There are a few hidden gems on the Carmel that most tourists miss. Here are my personal favorites for working remotely with great views."
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "postId": 1,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "Great post, I really enjoyed reading it!"
+    },
+    {
+      "id": "2",
+      "postId": 1,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "Thanks for sharing your thoughts on this topic."
+    },
+    {
+      "id": "3",
+      "postId": 2,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "The tip about avoiding multitasking changed my workflow completely."
+    },
+    {
+      "id": "4",
+      "postId": 2,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "I use most of these already and they really work!"
+    },
+    {
+      "id": "5",
+      "postId": 3,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "Eilat is beautiful, I went last year and loved it."
+    },
+    {
+      "id": "6",
+      "postId": 3,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "Did you visit the coral beach?"
+    },
+    {
+      "id": "7",
+      "postId": 4,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "React hooks made everything so much cleaner."
+    },
+    {
+      "id": "8",
+      "postId": 4,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "I started learning React last month and this helped me understand the basics."
+    },
+    {
+      "id": "9",
+      "postId": 5,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "The standup point is so true, it keeps the team aligned."
+    },
+    {
+      "id": "10",
+      "postId": 5,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "I would add that a proper desk setup makes a huge difference too."
+    },
+    {
+      "id": "11",
+      "postId": 6,
+      "name": "Dana Levi",
+      "email": "dana@example.com",
+      "body": "I love the one near the Bahai gardens!"
+    },
+    {
+      "id": "12",
+      "postId": 6,
+      "name": "Yossi Cohen",
+      "email": "yossi@example.com",
+      "body": "Will check these out next time I visit Haifa."
+    }
+  ],
+  "albums": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Summer Vacation 2024"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Family Photos"
+    },
+    {
+      "id": "3",
+      "userId": 2,
+      "title": "Work Conference"
+    },
+    {
+      "id": "4",
+      "userId": 2,
+      "title": "Nature Walks"
+    }
+  ],
+  "photos": [
+    {
+      "id": "1",
+      "albumId": 1,
+      "title": "Beach sunset",
+      "url": "https://picsum.photos/id/1/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/1/150/150"
+    },
+    {
+      "id": "2",
+      "albumId": 1,
+      "title": "Ocean waves",
+      "url": "https://picsum.photos/id/2/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/2/150/150"
+    },
+    {
+      "id": "3",
+      "albumId": 1,
+      "title": "Poolside morning",
+      "url": "https://picsum.photos/id/3/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/3/150/150"
+    },
+    {
+      "id": "4",
+      "albumId": 1,
+      "title": "City market",
+      "url": "https://picsum.photos/id/4/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/4/150/150"
+    },
+    {
+      "id": "5",
+      "albumId": 1,
+      "title": "Night lights",
+      "url": "https://picsum.photos/id/5/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/5/150/150"
+    },
+    {
+      "id": "6",
+      "albumId": 1,
+      "title": "Mountain view",
+      "url": "https://picsum.photos/id/6/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/6/150/150"
+    },
+    {
+      "id": "7",
+      "albumId": 1,
+      "title": "Desert road",
+      "url": "https://picsum.photos/id/7/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/7/150/150"
+    },
+    {
+      "id": "8",
+      "albumId": 1,
+      "title": "Harbor at dusk",
+      "url": "https://picsum.photos/id/8/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/8/150/150"
+    },
+    {
+      "id": "9",
+      "albumId": 2,
+      "title": "Birthday party",
+      "url": "https://picsum.photos/id/9/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/9/150/150"
+    },
+    {
+      "id": "10",
+      "albumId": 2,
+      "title": "Holiday dinner",
+      "url": "https://picsum.photos/id/10/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/10/150/150"
+    },
+    {
+      "id": "11",
+      "albumId": 2,
+      "title": "Backyard BBQ",
+      "url": "https://picsum.photos/id/11/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/11/150/150"
+    },
+    {
+      "id": "12",
+      "albumId": 2,
+      "title": "Morning coffee",
+      "url": "https://picsum.photos/id/12/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/12/150/150"
+    },
+    {
+      "id": "13",
+      "albumId": 2,
+      "title": "Kids playing",
+      "url": "https://picsum.photos/id/13/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/13/150/150"
+    },
+    {
+      "id": "14",
+      "albumId": 2,
+      "title": "Garden flowers",
+      "url": "https://picsum.photos/id/14/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/14/150/150"
+    },
+    {
+      "id": "15",
+      "albumId": 2,
+      "title": "Living room decor",
+      "url": "https://picsum.photos/id/15/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/15/150/150"
+    },
+    {
+      "id": "16",
+      "albumId": 2,
+      "title": "Evening walk",
+      "url": "https://picsum.photos/id/16/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/16/150/150"
+    },
+    {
+      "id": "17",
+      "albumId": 3,
+      "title": "Conference hall",
+      "url": "https://picsum.photos/id/17/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/17/150/150"
+    },
+    {
+      "id": "18",
+      "albumId": 3,
+      "title": "Keynote speaker",
+      "url": "https://picsum.photos/id/18/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/18/150/150"
+    },
+    {
+      "id": "19",
+      "albumId": 3,
+      "title": "Workshop session",
+      "url": "https://picsum.photos/id/19/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/19/150/150"
+    },
+    {
+      "id": "20",
+      "albumId": 3,
+      "title": "Networking lunch",
+      "url": "https://picsum.photos/id/20/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/20/150/150"
+    },
+    {
+      "id": "21",
+      "albumId": 3,
+      "title": "Award ceremony",
+      "url": "https://picsum.photos/id/21/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/21/150/150"
+    },
+    {
+      "id": "22",
+      "albumId": 3,
+      "title": "Exhibition booths",
+      "url": "https://picsum.photos/id/22/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/22/150/150"
+    },
+    {
+      "id": "23",
+      "albumId": 3,
+      "title": "Panel discussion",
+      "url": "https://picsum.photos/id/23/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/23/150/150"
+    },
+    {
+      "id": "24",
+      "albumId": 3,
+      "title": "Team photo",
+      "url": "https://picsum.photos/id/24/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/24/150/150"
+    },
+    {
+      "id": "25",
+      "albumId": 4,
+      "title": "Forest path",
+      "url": "https://picsum.photos/id/25/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/25/150/150"
+    },
+    {
+      "id": "26",
+      "albumId": 4,
+      "title": "Waterfall",
+      "url": "https://picsum.photos/id/26/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/26/150/150"
+    },
+    {
+      "id": "27",
+      "albumId": 4,
+      "title": "Rocky trail",
+      "url": "https://picsum.photos/id/27/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/27/150/150"
+    },
+    {
+      "id": "28",
+      "albumId": 4,
+      "title": "Wild flowers",
+      "url": "https://picsum.photos/id/28/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/28/150/150"
+    },
+    {
+      "id": "29",
+      "albumId": 4,
+      "title": "Lake reflection",
+      "url": "https://picsum.photos/id/29/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/29/150/150"
+    },
+    {
+      "id": "30",
+      "albumId": 4,
+      "title": "Birds on a branch",
+      "url": "https://picsum.photos/id/30/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/30/150/150"
+    },
+    {
+      "id": "32",
+      "albumId": 4,
+      "title": "Sunset hilltop",
+      "url": "https://picsum.photos/id/32/600/400",
+      "thumbnailUrl": "https://picsum.photos/id/32/150/150"
+    },
+    {
+      "albumId": 1,
+      "title": "1",
+      "url": "https://as2.ftcdn.net/v2/jpg/00/06/67/49/1000_F_6674908_DkuzLQe3Yznwoh2xC1WPyMIYnaOaaNpd.jpg",
+      "thumbnailUrl": "https://as2.ftcdn.net/v2/jpg/00/06/67/49/1000_F_6674908_DkuzLQe3Yznwoh2xC1WPyMIYnaOaaNpd.jpg",
+      "id": "QJlCVHiBkg8"
+    },
+    {
+      "albumId": 1,
+      "title": "2",
+      "url": "https://robbreport.com/wp-content/uploads/2018/06/ftd-summervaca-four-seasons.jpg?w=1000",
+      "thumbnailUrl": "https://robbreport.com/wp-content/uploads/2018/06/ftd-summervaca-four-seasons.jpg?w=1000",
+      "id": "_CCbwI7qEwc"
+    },
+    {
+      "albumId": 1,
+      "title": "3",
+      "url": "https://travels.findrextravels.com/api/uploads/images/offers/121155_vacation.jpg",
+      "thumbnailUrl": "https://travels.findrextravels.com/api/uploads/images/offers/121155_vacation.jpg",
+      "id": "nBejAsa6Wq8"
+    },
+    {
+      "albumId": 1,
+      "title": "4",
+      "url": "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VtbWVyJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1501426026826-31c667bdf23d?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3VtbWVyJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D",
+      "id": "6LXwZyQh4kY"
+    },
+    {
+      "albumId": 1,
+      "title": "5",
+      "url": "https://img.freepik.com/premium-photo/amazing-nature-beach-palm-trees-sunny-sky-sea-lagoon-summer-vacation-travel-holiday-wallpaper_663265-2758.jpg",
+      "thumbnailUrl": "https://img.freepik.com/premium-photo/amazing-nature-beach-palm-trees-sunny-sky-sea-lagoon-summer-vacation-travel-holiday-wallpaper_663265-2758.jpg",
+      "id": "WtY5N9z0dDA"
+    },
+    {
+      "albumId": 1,
+      "title": "6",
+      "url": "https://media.easemytrip.com/media/Blog/International/637867579316652136/637867579316652136hNPxy2.jpg",
+      "thumbnailUrl": "https://media.easemytrip.com/media/Blog/International/637867579316652136/637867579316652136hNPxy2.jpg",
+      "id": "Q5hAx5vD_KA"
+    },
+    {
+      "albumId": 1,
+      "title": "7",
+      "url": "https://i0.wp.com/www.exoticca.com/wp-content/uploads/2021/06/Maldives-BLOG-Luxury-Destination.png?w=1300&ssl=1",
+      "thumbnailUrl": "https://i0.wp.com/www.exoticca.com/wp-content/uploads/2021/06/Maldives-BLOG-Luxury-Destination.png?w=1300&ssl=1",
+      "id": "vZ2WwLkArVE"
+    },
+    {
+      "albumId": 1,
+      "title": "8",
+      "url": "https://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/05/15/hilton-bora-bora-nui-resort-aerial.jpg.rend.hgtvcom.1280.960.85.suffix/1491582087619.webp",
+      "thumbnailUrl": "https://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/05/15/hilton-bora-bora-nui-resort-aerial.jpg.rend.hgtvcom.1280.960.85.suffix/1491582087619.webp",
+      "id": "mqMPo476hvI"
+    },
+    {
+      "albumId": 1,
+      "title": "9",
+      "url": "https://images.zicasso.com/ca0c95cb506660e05ea3973da3e7de85.jpg",
+      "thumbnailUrl": "https://images.zicasso.com/ca0c95cb506660e05ea3973da3e7de85.jpg",
+      "id": "6rYjF2h8S2U"
+    },
+    {
+      "albumId": 1,
+      "title": "10",
+      "url": "https://i.natgeofe.com/n/1362a3f2-dcb2-4381-b885-b533132609cd/5937910.jpg",
+      "thumbnailUrl": "https://i.natgeofe.com/n/1362a3f2-dcb2-4381-b885-b533132609cd/5937910.jpg",
+      "id": "fjpvr4ODgyQ"
+    },
+    {
+      "albumId": 1,
+      "title": "11",
+      "url": "https://cdn.prod.website-files.com/6773e7b79a04c1b58ee88bc6/677ac90e6f12ef31a5c7ccec_64529322e4a712e28bfa7f61_how%2520to%2520research%2520packaged%2520vacations.jpeg",
+      "thumbnailUrl": "https://cdn.prod.website-files.com/6773e7b79a04c1b58ee88bc6/677ac90e6f12ef31a5c7ccec_64529322e4a712e28bfa7f61_how%2520to%2520research%2520packaged%2520vacations.jpeg",
+      "id": "GQll4WHQc3A"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
