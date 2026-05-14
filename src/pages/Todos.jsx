@@ -70,10 +70,11 @@ export default function Todos() {
         {loading && <p className="todosLoading">Loading...</p>}
         {error && <p className="todosError">{error}</p>}
         <ul className="todosList">
-          {sorted.map((todo) => (
+          {sorted.map((todo, index) => (
             <TodoItem
               key={todo.id}
               todo={todo}
+              index={index}
               onDelete={deleteTodo}
               onToggle={toggleTodo}
               onUpdateTitle={updateTodoTitle}

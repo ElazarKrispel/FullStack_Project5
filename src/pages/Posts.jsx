@@ -105,10 +105,11 @@ export default function Posts() {
         {loading && <p className="postsLoading">Loading...</p>}
         {error && <p className="postsError">{error}</p>}
         <ul className="postsList">
-          {filtered.map((post) => (
+          {filtered.map((post, index) => (
             <PostItem
               key={post.id}
               post={post}
+              index={index}
               isSelected={post.id === selectedPostId}
               onSelect={handleSelect}
               onDelete={deletePost}

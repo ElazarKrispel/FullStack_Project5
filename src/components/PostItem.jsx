@@ -5,7 +5,7 @@ import './PostItem.css';
  * Renders a single post row with select, inline editing, and delete.
  * Highlights when isSelected is true.
  */
-export default function PostItem({ post, isSelected, onSelect, onDelete, onUpdate }) {
+export default function PostItem({ post, index, isSelected, onSelect, onDelete, onUpdate }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editTitle, setEditTitle] = useState(post.title);
   const [editBody, setEditBody] = useState(post.body);
@@ -20,7 +20,7 @@ export default function PostItem({ post, isSelected, onSelect, onDelete, onUpdat
   return (
     <li className={`postItem ${isSelected ? 'postItemSelected' : ''}`}>
       <div className="postItemHeader">
-        <span className="postItemId">#{post.id}</span>
+        <span className="postItemId">#{index + 1}</span>
         {isEditing ? (
           <input
             className="postItemEditTitle"

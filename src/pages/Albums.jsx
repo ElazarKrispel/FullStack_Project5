@@ -56,10 +56,11 @@ export default function Albums() {
         {loading && <p className="albumsLoading">Loading...</p>}
         {error && <p className="albumsError">{error}</p>}
         <ul className="albumsList">
-          {filtered.map((album) => (
+          {filtered.map((album, index) => (
             <AlbumItem
               key={album.id}
               album={album}
+              index={index}
               userId={id}
               onDelete={deleteAlbum}
             />

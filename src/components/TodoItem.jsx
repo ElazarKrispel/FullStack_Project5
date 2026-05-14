@@ -4,7 +4,7 @@ import './TodoItem.css';
 /**
  * Renders a single todo row with a checkbox, inline title editing, and delete.
  */
-export default function TodoItem({ todo, onDelete, onToggle, onUpdateTitle }) {
+export default function TodoItem({ todo, index, onDelete, onToggle, onUpdateTitle }) {
   const [isEditing, setIsEditing] = useState(false);
   const [editValue, setEditValue] = useState(todo.title);
 
@@ -17,7 +17,7 @@ export default function TodoItem({ todo, onDelete, onToggle, onUpdateTitle }) {
 
   return (
     <li className={`todoItem ${todo.completed ? 'todoItemDone' : ''}`}>
-      <span className="todoItemId">#{todo.id}</span>
+      <span className="todoItemId">#{index + 1}</span>
       <input
         type="checkbox"
         className="todoItemCheckbox"
