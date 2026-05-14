@@ -4,12 +4,12 @@ import { getPhotos, createPhoto, updatePhoto, deletePhoto } from '../services/ap
 const LIMIT = 10;
 
 /**
- * Manages photos for a given album with server-side pagination and sessionStorage caching.
+ * Manages photos for a given album with server-side ordered photos and sessionStorage caching.
  *
- * Two-effect design:
- *   Effect 1 [albumId]: on mount, restores from cache or fetches page 1.
- *   Effect 2 [albumId, currentPage]: fires only when currentPage exceeds what's already loaded,
- *     preventing StrictMode's double-invocation from triggering spurious extra fetches.
+ * we decided to do here a Two-effect design:
+ * 1. Effect 1 [albumId]: on mount, restores from cache or fetches page 1.
+ * 2. Effect 2 [albumId, currentPage]: fires only when currentPage exceeds what's already loaded,
+ *    preventing StrictMode's double-invocation from triggering extra fetches.
  */
 export function usePhotos(albumId) {
   const [photos, setPhotos] = useState([]);
