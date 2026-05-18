@@ -1,16 +1,62 @@
-# React + Vite
+# FullStack Project 5: Social Productivity App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Course:** Full-Stack Web Development, Lev Academic Center
+**Students:** Elazar Krispel & Tomere Kalman
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Project Overview
 
-## React Compiler
+A multi-user social productivity web app where users can register, log in, and manage their personal content — todos, posts, albums, and photos.
+Each user has a private dashboard with full CRUD capabilities across all content types.
+Comments can be read and added on posts, photos are organized in albums with paginated loading, and all data is cached in session storage to minimize API calls.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer | Technology |
+|-------|------------|
+| Frontend | React 19, React Router DOM 7 |
+| Build Tool | Vite 8 |
+| Backend | JSON Server (mock REST API) |
+| Storage | localStorage + sessionStorage |
+| Styling | Plain CSS (per-component files) |
+
+---
+
+## Features
+
+- **Authentication** — 2-step registration form & login with username/password, session persisted in localStorage
+- **Protected Routes** — all user pages are guarded; unauthorized access redirects to login
+- **Todos** — create, edit, delete, toggle complete, search by title, sort by ID / title / status
+- **Posts** — full CRUD, search by ID/title, lazy-load comments per post, add/edit/delete comments
+- **Albums** — create, rename, delete, search by ID/title
+- **Photos** — paginated photo gallery (10 per page), edit title & image URL, click to open full size
+- **User Info Modal** — view profile details (name, email, phone, city, company) inline
+- **Session Caching** — todos, posts, albums, and photos are cached per user to reduce redundant API calls
+- **Custom Hooks** — `useTodos`, `usePosts`, `useComments`, `useAlbums`, `usePhotos` for clean separation of logic
+
+---
+
+## How to Run
+
+**Prerequisites:** Node.js installed
+
+```bash
+npm install
+```
+
+Open two terminals:
+
+```bash
+# Terminal 1 — start the mock backend (port 3001)
+npm run server
+
+# Terminal 2 — start the React dev server (port 5173)
+npm run dev
+```
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+> **Test credentials:** username `yossi` / password `pass1` (or register a new account)
